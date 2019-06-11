@@ -1,3 +1,4 @@
-let a ;
+let a;
 a = "titi";
-console.log(a;
+console.log(a);
+alerte(titi);
