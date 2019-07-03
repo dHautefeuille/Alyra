@@ -17,6 +17,30 @@ function nombreAleatoire()
       alert("Bravo ! Les nombres sont exacts");
       var result = true;
 
+    } else if (nbPropose >= gNb - 5 && nbPropose <= gNb + 5) {
+      var nbPropose = parseInt(prompt("Le nombre est à moins de 5 prés"));
+      var result = false;
+
+    } else if (nbPropose >= gNb - 6 && nbPropose <= gNb + 6) {
+        var nbPropose = parseInt(prompt("Le nombre est à moins de 6 prés"));
+        var result = false;
+
+    } else if (nbPropose >= gNb - 7 && nbPropose <= gNb + 7) {
+          var nbPropose = parseInt(prompt("Le nombre est à moins de 7 prés"));
+          var result = false;
+
+    } else if (nbPropose >= gNb - 8 && nbPropose <= gNb + 8) {
+          var nbPropose = parseInt(prompt("Le nombre est à moins de 8 prés"));
+          var result = false;
+
+    } else if (nbPropose >= gNb - 9 && nbPropose <= gNb + 9) {
+          var nbPropose = parseInt(prompt("Le nombre est à moins de 9 prés"));
+          var result = false;
+
+    } else if (nbPropose >= gNb - 10 && nbPropose <= gNb + 10) {
+          var nbPropose = parseInt(prompt("Le nombre est à moins de 10 prés"));
+          var result = false;
+
     } else if (nbPropose > gNb) {
       var nbPropose = parseInt(prompt("Le nombre est inférieur au tiens"));
       var result = false;
