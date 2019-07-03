@@ -1,4 +1,5 @@
 //Exercice 1.1.1: Trouver un nombre aléatoire
+//Lien: https://ecole.alyra.fr/mod/assign/view.php?id=35
 function nombreAleatoire()
 {
   //Genérateur de nombre entier entre 0 et 100
@@ -28,6 +29,6 @@ function nombreAleatoire()
       alert("Tu peux recommencer le jeu");
       var result = true;
     }
-    console.log("Résultat est " + result);
+    console.log("Resultat est " + result);
   }
 }
