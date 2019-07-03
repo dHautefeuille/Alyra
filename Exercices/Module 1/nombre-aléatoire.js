@@ -17,11 +17,11 @@ function nombreAleatoire()
       var result = true;
 
     } else if (nbPropose > gNb) {
-      var nbPropose = parseInt(prompt("Le nombre est inférieur au tien"));
+      var nbPropose = parseInt(prompt("Le nombre est inférieur au tiens"));
       var result = false;
 
     } else if (nbPropose < gNb) {
-      var nbPropose = parseInt(prompt("Le nombre est supérieur au tien"));
+      var nbPropose = parseInt(prompt("Le nombre est supérieur au tiens"));
       var result = false;
 
     } else {
