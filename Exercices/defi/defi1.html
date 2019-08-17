@@ -5,84 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <script src='script.js' type='text/javascript'/></script>
-    <title>Defi1</title>
+    <title>Défi #1 :</title>
   </head>
-<div>
-<h1>Défi #1 : Outil d’analyse bitcoin</h1>
-  <div class="card border-primary mb-4" style="max-width: 100rem;">
-    <div class="card-header"><h4>Conversion Decimal vers Hexadécimal</h4></div>
-      <div class="card-body">
-          <h3>Decimal :<input type="number" value=255 id="decimald"></h3>
-          <h3>Hexadecimal : <span type="text" id="hexadecimald"></span></h3>
-          <button type="button" class="btn btn-success" id="convertird">Convertir</button>
+<body>
+  <div class="container">
+    <h1>Outil d’analyse bitcoin</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card border-primary mb-4">
+          <div class="card-header"><h2>Conversion Decimal vers Hexadécimal</h2></div>
+            <div class="card-body">
+                <p>Decimal :<input type="number" value=255 id="decimald"><br>
+                   Hexadecimal : <span type="text" id="hexadecimald"></span></p>
+                <button type="button" class="btn btn-success" id="convertird">Convertir</button>
+            </div>
+        </div>
       </div>
-    <div class="card-header"><h4>Conversion Hexadécimal vers Decimal</h4></div>
-    <div class="card-body">
-        <h3>Hexadecimal :<input type="text" value="0xff" id="hexah"></h3>
-        <h3>Decimal : <span type="number" id="decimalh"></span></h3>
-        <button type="button" class="btn btn-success" id="convertirh">Convertir</button>
+      <div class="col-sm-6">
+        <div class="card border-primary mb-4">
+          <div class="card-header"><h2>Conversion Hexadécimal vers Decimal</h2></div>
+          <div class="card-body">
+              <p>Hexadecimal :<input type="text" value="0xff" id="hexah"><br>
+                 Decimal : <span type="number" id="decimalh"></span><p>
+              <button type="button" class="btn btn-success" id="convertirh">Convertir</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-sm-6">
+        <div class="card border-primary mb-4">
+          <div class="card-header"><h2>Conversion petit endien</h2></div>
+          <div class="card-body">
+              <p>Hexa Little Endian :<input type="text" value="000001FF" id="hle"><br>
+                 Hexadecimal : <span type="text" id="hexadecimalPE"></span><br>
+                 Decimal : <span type="text" id="decimalPE"></span></p>
+              <button type="button" class="btn btn-success" id="convertirPE">Convertir</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-  <script>
-  function convertDeciToHexa(d){
-      hexa = parseInt(d, 10).toString(16);
-      //console.log(hexa);
-      return hexa;
-  }
-  document.getElementById("convertird").addEventListener("click", event => {
-            decimald = document.getElementById("decimald").value
-            hexad = convertDeciToHexa(decimald)
-            document.getElementById("hexadecimald").innerHTML = "0x" + hexa
-          })
-  function convertHexaToDeci(h){
-              deci = parseInt(h, 16);
-              //console.log(h);
-              return deci;
-          }
-  document.getElementById("convertirh").addEventListener("click", event => {
-            hexah = document.getElementById("hexah").value
-            decimalh = convertHexaToDeci(hexah)
-            document.getElementById("decimalh").innerHTML = deci
-          })
-  </script>
-  <div class="card-header"><h4>Conversion petit endien</h4></div>
-  <div class="card-body">
-      <h3>Hexa Little Endian :<input type="text" value="000001FF" id="hle"></h3>
-      <h3>Hexadecimal : <span type="text" id="hexadecimalPE"></span></h3>
-      <h3>Decimal : <span type="text" id="decimalPE"></span></h3>
-      <button type="button" class="btn btn-success" id="convertirPE">Convertir</button>
   </div>
-  <script>
-      function convertHexaLittleEndienToHexa(h) {
-          if (h.length % 2 == 1) {
-              h = '0' + h
-          }
-          let retour = "";
-          for (let i = 0; i < h.length - 1; i += 2) {
-              retour = h[i] + h[i + 1] + retour;
-          }
-          return retour;
-      }
-      document.getElementById("convertirPE").addEventListener("click", event => {
-          hle = document.getElementById("hle").value
-          hexa = convertHexaLittleEndienToHexa(hle)
-          document.getElementById("hexadecimalPE").innerHTML = "0x" + hexa
-          document.getElementById("decimalPE").innerHTML = parseInt(hexa, 16)
-
-      })
-  </script>
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
 </html>
